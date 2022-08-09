@@ -6,6 +6,7 @@
 package Vista;
 
 import datos.Productos;
+import modelo.Operacionespila;
 import modelo.Pila;
 
 /**
@@ -31,6 +32,12 @@ public class MainPila {
         
         pilaP.desapilar();
         System.out.println("pila \n"+pilaP.toString());
+        
+        Pila<Productos> pd= Operacionespila.pilaDuplicada(pilaP);
+        System.out.println("Pilas Duplicadas\n" + pd.toString());
+        
+        Pila<Productos> pi= Operacionespila.pilaInvertida(pilaP);
+        System.out.println("Pilas Invertidas\n" + pi.toString());
     }
     
     
